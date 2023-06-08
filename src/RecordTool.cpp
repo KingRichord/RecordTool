@@ -7,13 +7,10 @@ RecordTool::RecordTool() {
 	std::string ip = "tcp://192.168.192.5:8002";	LogInfo(ip)
 	
 	m_talker_->Init(ip);
-	process.detach();
+	
 }
 RecordTool::~RecordTool()
 {
-	while (process.joinable())
-		process.join();
-	// estimator_.reset();
 	m_talker_.reset();
 }
 void RecordTool::run() {

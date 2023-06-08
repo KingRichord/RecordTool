@@ -73,6 +73,8 @@ private:
 	std::shared_ptr<Talker> m_talker_;
 	std::thread process;
 	bool fist_init{true};
+	std::string path_to_save_data_;
+	
 };
 
 RBK_INHERIT_PROVIDER(RecordTool, NPluginInterface, "1.0.0");
